@@ -25,6 +25,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
+                
                     kubectl --kubeconfig=$KUBE_CONFIG apply -f deployment.yaml
                 '''
             }
