@@ -19,7 +19,7 @@ pipeline {
                 echo "Logged into DockerHub"
                 }
             }
-        
+        parallel{
         stage('Push') {
             steps {
                 // sh 'docker push $DOCKER_IMAGE:latest'
@@ -36,4 +36,5 @@ pipeline {
             }
         }
     }
+
 }
